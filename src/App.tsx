@@ -87,7 +87,7 @@ function App() {
           {/* Calendar Section */}
           <div id="calendar" className="mt-10 sm:mt-12 md:mt-16 max-w-5xl mx-auto">
             <div
-              style={{ width: '94%', height: '500px', overflow: 'auto' }}
+              style={{ width: '100%', height: '100%', overflow: 'auto' }}
               id="my-cal-inline-consultation"
               className="rounded-lg bg-black shadow-[0_0_30px_rgba(0,0,0,0.5)] border border-gray-800"
             ></div>
@@ -117,7 +117,7 @@ function App() {
               autoPlay={false}
               preload="metadata"
             >
-              <source src="/assets/David testimonial - Made with Clipchamp (1).webm" type="video/webm" />
+              <source src="./assets/David testimonial - Made with Clipchamp (1).webm" type="video/webm" />
               Your browser does not support the video tag.
             </video>
           </div>
