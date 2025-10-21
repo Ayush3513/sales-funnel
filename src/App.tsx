@@ -2,6 +2,7 @@ import { Award, Shield } from 'lucide-react';
 import { useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import testimonialVideo from '../assets/David testimonial - Made with Clipchamp (1).webm';
 
 function App() {
   useEffect(() => {
@@ -117,7 +118,7 @@ function App() {
               autoPlay={false}
               preload="metadata"
             >
-              <source src="./assets/David testimonial - Made with Clipchamp (1).webm" type="video/webm" />
+              <source src={testimonialVideo} type="video/webm" />
               Your browser does not support the video tag.
             </video>
           </div>
