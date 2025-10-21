@@ -56,27 +56,27 @@ function App() {
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-[#000000]">
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 sm:pt-16 md:pt-20 pb-16 sm:pb-24 md:pb-32">
-          <div className="text-center space-y-4 sm:space-y-6 md:space-y-8">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold leading-tight">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-16 md:pt-20 pb-12 sm:pb-24 md:pb-32">
+          <div className="text-center space-y-3 sm:space-y-6 md:space-y-8">
+            <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-7xl font-bold leading-tight">
               We help <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-200 to-gray-400">Chiropractors</span> book an extra{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-orange-500">30 clients</span>{' '}
               in 75 days
             </h1>
 
-            <p className="text-xl sm:text-2xl md:text-3xl lg:text-5xl text-gray-300 font-light">
+            <p className="text-lg sm:text-2xl md:text-3xl lg:text-5xl text-gray-300 font-light mt-2 sm:mt-0">
                with <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-500 to-white bg-size-200 animate-gradient-x">Automations</span> and{' '}
               <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-500 to-white bg-size-200 animate-gradient-x">AI ecosystems</span>
             </p>
 
             <div className="pt-2 sm:pt-4">
-              <p className="text-lg sm:text-xl text-amber-200 font-semibold mb-4 sm:mb-8">
+              <p className="text-lg sm:text-xl text-amber-200 font-semibold mb-3 sm:mb-8">
                 (WE OFFER IT ONE WEEK FOR FREE)
               </p>
 
               <a
                 href="#calendar"
-                className="cta-button inline-block px-6 sm:px-8 md:px-12 py-3 sm:py-4 md:py-5 md:my-14 bg-gradient-to-r from-gray-100 to-gray-200 text-gray-900 text-lg sm:text-xl font-bold rounded-full hover:scale-105 transition-transform duration-300"
+                className="cta-button inline-block px-5 sm:px-8 md:px-12 py-2 sm:py-4 md:py-5 md:my-14 bg-gradient-to-r from-gray-100 to-gray-200 text-gray-900 text-base sm:text-lg md:text-xl font-bold rounded-full hover:scale-105 transition-transform duration-300"
               >
                 Book Free Consultation
               </a>
@@ -136,7 +136,7 @@ function App() {
 
           <a
              href="#calendar"
-            className="cta-button inline-block px-8 sm:px-12 md:px-16 py-3 sm:py-4 md:py-6 bg-gradient-to-r from-gray-100 to-gray-200 text-gray-900 text-xl sm:text-2xl font-bold rounded-full hover:scale-105 transition-transform duration-300 mb-8 sm:mb-12 md:mb-16"
+            className="cta-button inline-block px-6 sm:px-12 md:px-16 py-2 sm:py-4 md:py-6 bg-gradient-to-r from-gray-100 to-gray-200 text-gray-900 text-base sm:text-xl md:text-2xl font-bold rounded-full hover:scale-105 transition-transform duration-300 mb-8 sm:mb-12 md:mb-16"
           >
             Get Free Consultation
           </a>
