@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .cta-button {
+    position: relative;
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.6),
+                0 0 80px rgba(255, 255, 255, 0.4),
+                0 0 120px rgba(255, 255, 255, 0.2);
+  }
+
+  .cta-button::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: inherit;
+    padding: 2px;
+    background: linear-gradient(45deg, #ffffff, #e5e5e5, #ffffff);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0.6;
+  }
+}
