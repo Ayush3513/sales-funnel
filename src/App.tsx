@@ -227,7 +227,7 @@ function App() {
                     </h3>
                     
                     <p className="text-gray-300 mb-6">
-Switching to Kraftonex Studios was the best decision I made for my practice. The new website looks incredibly professional and we started receiving online bookings within days. The appointment reminders and automated follow-ups helped reactivate past patients who hadn’t visited us in years. I can track every lead in real-time, which gives me full confidence in their system. Highly recommended                    </p>
+Kraftonex set up our website and we started getting new appointment bookings right away. The dashboard makes tracking leads so easy!              </p>
                     
                     <div className="mt-auto flex items-center justify-between">
                       <div>
@@ -235,9 +235,8 @@ Switching to Kraftonex Studios was the best decision I made for my practice. The
                         <p className="text-sm text-gray-400">PATIENT SINCE 2021</p>
                       </div>
                       <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-amber-400">
-                        <svg className="w-full h-full text-gray-300" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M12 14.25c4.142 0 7.5 1.567 7.5 3.5V20h-15v-2.25c0-1.933 3.358-3.5 7.5-3.5zm0-1.5c-2.07 0-3.75-1.68-3.75-3.75S9.93 5.25 12 5.25s3.75 1.68 3.75 3.75-1.68 3.75-3.75 3.75z" />
-                        </svg>
+                                               {/* <img src="assets/card3profile.png" alt="Profile" className="w-full h-full object-cover" /> */}
+
                       </div>
                     </div>
                   </div>
@@ -253,7 +252,7 @@ Switching to Kraftonex Studios was the best decision I made for my practice. The
                     </h3>
                     
                     <p className="text-gray-300 mb-6">
-                      "As someone with a busy work schedule, I love being able to book appointments online anytime. The text reminders have helped me never miss a session. My neck pain from years of desk work has improved dramatically after just 6 weeks of treatment."
+                      Their AI follows up with missed calls and online leads 24/7. So many new patients have come through that would have been lost!
                     </p>
                     
                     <div className="mt-auto flex items-center justify-between">
@@ -262,9 +261,8 @@ Switching to Kraftonex Studios was the best decision I made for my practice. The
                         <p className="text-sm text-gray-400">PATIENT SINCE 2022</p>
                       </div>
                       <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-amber-400">
-                        <svg className="w-full h-full text-gray-300" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M12 14.25c4.142 0 7.5 1.567 7.5 3.5V20h-15v-2.25c0-1.933 3.358-3.5 7.5-3.5zm0-1.5c-2.07 0-3.75-1.68-3.75-3.75S9.93 5.25 12 5.25s3.75 1.68 3.75 3.75-1.68 3.75-3.75 3.75z" />
-                        </svg>
+                                                {/* <img src="assets/card3profile.png" alt="Profile" className="w-full h-full object-cover" /> */}
+
                       </div>
                     </div>
                   </div>
@@ -276,11 +274,11 @@ Switching to Kraftonex Studios was the best decision I made for my practice. The
                     
                     
                     <h3 className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-orange-500 mb-4">
-                      TRANSPARENT, PROFESSIONAL, AND EFFECTIVE
+                      TRANSPARENT, PROFESSIONAL
                     </h3>
                     
                     <p className="text-gray-300 mb-6">
-                      "After a car accident left me with severe whiplash, I was in constant pain. The personalized treatment plan and ability to track my progress through the patient portal has been incredible. I'm now pain-free and have regained full mobility in my neck."
+                      Our Facebook ads now fill our calendar. Kraftonex knows how to bring in real patients no more guessing or wasted budget.
                     </p>
                     
                     <div className="mt-auto flex items-center justify-between">
@@ -289,9 +287,7 @@ Switching to Kraftonex Studios was the best decision I made for my practice. The
                         <p className="text-sm text-gray-400">PATIENT SINCE 2020</p>
                       </div>
                       <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-amber-400">
-                        <svg className="w-full h-full text-gray-300" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M12 14.25c4.142 0 7.5 1.567 7.5 3.5V20h-15v-2.25c0-1.933 3.358-3.5 7.5-3.5zm0-1.5c-2.07 0-3.75-1.68-3.75-3.75S9.93 5.25 12 5.25s3.75 1.68 3.75 3.75-1.68 3.75-3.75 3.75z" />
-                        </svg>
+                        {/* <img src="assets/card3profile.png" alt="Profile" className="w-full h-full object-cover" /> */}
                       </div>
                     </div>
                   </div>
