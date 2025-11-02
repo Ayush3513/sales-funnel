@@ -137,8 +137,8 @@ function App() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
             {/* Positive Items (Green) */}
             <div className="bg-opacity-10 bg-white p-3 sm:p-4 md:p-6 rounded-lg border border-green-500 shadow-[0_0_10px_rgba(34,197,94,0.6)] relative">
-              <div className="absolute -top-3 -left-3 bg-green-500 rounded-full p-1">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 sm:h-6 sm:w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <div className="absolute -top-2 -left-2 sm:-top-3 sm:-left-3 bg-green-500 rounded-full p-0.5 sm:p-1">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
               </div>
@@ -146,8 +146,8 @@ function App() {
             </div>
             
             <div className="bg-opacity-10 bg-white p-3 sm:p-4 md:p-6 rounded-lg border border-green-500 shadow-[0_0_10px_rgba(34,197,94,0.6)] relative">
-              <div className="absolute -top-3 -left-3 bg-green-500 rounded-full p-1">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 sm:h-6 sm:w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <div className="absolute -top-2 -left-2 sm:-top-3 sm:-left-3 bg-green-500 rounded-full p-0.5 sm:p-1">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
               </div>
@@ -155,8 +155,8 @@ function App() {
             </div>
             
             <div className="bg-opacity-10 bg-white p-3 sm:p-4 md:p-6 rounded-lg border border-green-500 shadow-[0_0_10px_rgba(34,197,94,0.6)] relative">
-              <div className="absolute -top-3 -left-3 bg-green-500 rounded-full p-1">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 sm:h-6 sm:w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <div className="absolute -top-2 -left-2 sm:-top-3 sm:-left-3 bg-green-500 rounded-full p-0.5 sm:p-1">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
               </div>
@@ -164,8 +164,8 @@ function App() {
             </div>
             
             <div className="bg-opacity-10 bg-white p-3 sm:p-4 md:p-6 rounded-lg border border-green-500 shadow-[0_0_10px_rgba(34,197,94,0.6)] relative">
-              <div className="absolute -top-3 -left-3 bg-green-500 rounded-full p-1">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 sm:h-6 sm:w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <div className="absolute -top-2 -left-2 sm:-top-3 sm:-left-3 bg-green-500 rounded-full p-0.5 sm:p-1">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
               </div>
@@ -175,8 +175,8 @@ function App() {
             {/* Negative Items (Red) */}
 
             <div className="bg-opacity-10 bg-white p-3 sm:p-4 md:p-6 rounded-lg border border-red-500 shadow-[0_0_10px_rgba(239,68,68,0.6)] relative">
-              <div className="absolute -top-3 -left-3 bg-red-500 rounded-full p-1">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 sm:h-6 sm:w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <div className="absolute -top-2 -left-2 sm:-top-3 sm:-left-3 bg-red-500 rounded-full p-0.5 sm:p-1">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
               </div>
@@ -184,8 +184,8 @@ function App() {
             </div>
 
             <div className="bg-opacity-10 bg-white p-3 sm:p-4 md:p-6 rounded-lg border border-red-500 shadow-[0_0_10px_rgba(239,68,68,0.6)] relative">
-              <div className="absolute -top-3 -left-3 bg-red-500 rounded-full p-1">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 sm:h-6 sm:w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <div className="absolute -top-2 -left-2 sm:-top-3 sm:-left-3 bg-red-500 rounded-full p-0.5 sm:p-1">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
               </div>
@@ -193,6 +193,114 @@ function App() {
             </div>
             
             
+          </div>
+        </div>
+      </section>
+
+      {/* Reviews Section - Inspired by the provided image */}
+      <section className="py-16 sm:py-20 bg-b overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="relative z-10">
+            {/* Section Header */}
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">
+               Chiropractors <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-orange-500">SUCCESS</span> Stories<br />
+              </h2>
+              
+            </div>
+
+            {/* Reviews Slider */}
+            <div className="relative">
+              {/* Decorative Elements */}
+              <div className="absolute top-1/2 left-0 w-64 h-64 bg-orange-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 -translate-y-1/2 -translate-x-1/2"></div>
+              <div className="absolute bottom-0 right-0 w-80 h-80 bg-amber-300 rounded-full mix-blend-multiply filter blur-3xl opacity-10 translate-x-1/3"></div>
+              
+              {/* Reviews Cards */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {/* Review Card 1 */}
+                <div className="bg-[#1F1F1F] from-gray-800 to-gray-900 rounded-2xl overflow-hidden">
+                  <div className="p-8 h-full flex flex-col">
+                    
+                    
+                    <h3 className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-orange-500 mb-4">
+                      GAME-CHANGER FOR MY CLINIC!
+                    </h3>
+                    
+                    <p className="text-gray-300 mb-6">
+Switching to Kraftonex Studios was the best decision I made for my practice. The new website looks incredibly professional and we started receiving online bookings within days. The appointment reminders and automated follow-ups helped reactivate past patients who hadn’t visited us in years. I can track every lead in real-time, which gives me full confidence in their system. Highly recommended                    </p>
+                    
+                    <div className="mt-auto flex items-center justify-between">
+                      <div>
+                        <p className="font-medium text-white">SARAH MILLER</p>
+                        <p className="text-sm text-gray-400">PATIENT SINCE 2021</p>
+                      </div>
+                      <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-amber-400">
+                        <svg className="w-full h-full text-gray-300" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M12 14.25c4.142 0 7.5 1.567 7.5 3.5V20h-15v-2.25c0-1.933 3.358-3.5 7.5-3.5zm0-1.5c-2.07 0-3.75-1.68-3.75-3.75S9.93 5.25 12 5.25s3.75 1.68 3.75 3.75-1.68 3.75-3.75 3.75z" />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Review Card 2 */}
+                <div className="bg-[#1F1F1F] from-gray-800 to-gray-900 rounded-2xl overflow-hidden">
+                  <div className="p-8 h-full flex flex-col">
+                  
+                    
+                    <h3 className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-orange-500 mb-4">
+                      NO MORE LOST LEADS EVER!
+                    </h3>
+                    
+                    <p className="text-gray-300 mb-6">
+                      "As someone with a busy work schedule, I love being able to book appointments online anytime. The text reminders have helped me never miss a session. My neck pain from years of desk work has improved dramatically after just 6 weeks of treatment."
+                    </p>
+                    
+                    <div className="mt-auto flex items-center justify-between">
+                      <div>
+                        <p className="font-medium text-white">ROBERT CHEN</p>
+                        <p className="text-sm text-gray-400">PATIENT SINCE 2022</p>
+                      </div>
+                      <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-amber-400">
+                        <svg className="w-full h-full text-gray-300" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M12 14.25c4.142 0 7.5 1.567 7.5 3.5V20h-15v-2.25c0-1.933 3.358-3.5 7.5-3.5zm0-1.5c-2.07 0-3.75-1.68-3.75-3.75S9.93 5.25 12 5.25s3.75 1.68 3.75 3.75-1.68 3.75-3.75 3.75z" />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Review Card 3 */}
+                <div className="bg-[#1F1F1F] from-gray-800 to-gray-900 rounded-2xl overflow-hidden">
+                  <div className="p-8 h-full flex flex-col">
+                    
+                    
+                    <h3 className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-orange-500 mb-4">
+                      TRANSPARENT, PROFESSIONAL, AND EFFECTIVE
+                    </h3>
+                    
+                    <p className="text-gray-300 mb-6">
+                      "After a car accident left me with severe whiplash, I was in constant pain. The personalized treatment plan and ability to track my progress through the patient portal has been incredible. I'm now pain-free and have regained full mobility in my neck."
+                    </p>
+                    
+                    <div className="mt-auto flex items-center justify-between">
+                      <div>
+                        <p className="font-medium text-white">JENNIFER TAYLOR</p>
+                        <p className="text-sm text-gray-400">PATIENT SINCE 2020</p>
+                      </div>
+                      <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-amber-400">
+                        <svg className="w-full h-full text-gray-300" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M12 14.25c4.142 0 7.5 1.567 7.5 3.5V20h-15v-2.25c0-1.933 3.358-3.5 7.5-3.5zm0-1.5c-2.07 0-3.75-1.68-3.75-3.75S9.93 5.25 12 5.25s3.75 1.68 3.75 3.75-1.68 3.75-3.75 3.75z" />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Slider Indicator */}
+              
+            </div>
           </div>
         </div>
       </section>
