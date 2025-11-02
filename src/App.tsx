@@ -70,13 +70,13 @@ function App() {
             </p>
 
             <div className="pt-2 sm:pt-4">
-              <p className="text-lg sm:text-xl text-amber-200 font-semibold mb-3 sm:mb-8">
+              <p className="text-sm sm:text-xl text-amber-200 font-semibold mb-3 sm:mb-8">
                 (WE OFFER IT ONE WEEK FOR FREE)
               </p>
 
               <a
                 href="#calendar"
-                className="cta-button inline-block px-5 sm:px-8 md:px-12 py-2 sm:py-4 md:py-5 md:my-14 bg-gradient-to-r from-gray-100 to-gray-200 text-gray-900 text-base sm:text-lg md:text-xl font-bold rounded-full hover:scale-105 transition-transform duration-300"
+                className="cta-button inline-block px-10 my-8 sm:px-8 md:px-12 py-2 sm:py-4 md:py-5 md:my-14 bg-gradient-to-r from-gray-100 to-gray-200 text-gray-900 text-base sm:text-lg md:text-xl font-bold rounded-full hover:scale-105 transition-transform duration-300"
               >
                 Book Free Consultation
               </a>
@@ -106,7 +106,7 @@ function App() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-4 sm:space-y-6 mb-8 sm:mb-12 md:mb-16">
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-white drop-shadow-[0_0_10px_rgba(0,0,0,0.8)]">
-              Testimonial
+              Our <span className='text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-orange-500'>Testimonial</span>
             </h2>
             
           </div>
@@ -125,10 +125,80 @@ function App() {
         </div>
       </section>
 
-      
+      {/* Who Is This For Section */}
+      <section className="py-12 sm:py-16 md:py-40 bg-gradient-to-b from-black to-[#0a0a0a]">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center space-y-4 sm:space-y-6 mb-8 sm:mb-12">
+            <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white">
+             Discover if the <span className='text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-orange-500'>ChiroGrowth </span> Accelerator Is Made for You
+            </h2>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
+            {/* Positive Items (Green) */}
+            <div className="bg-opacity-10 bg-white p-3 sm:p-4 md:p-6 rounded-lg border border-green-500 shadow-[0_0_10px_rgba(34,197,94,0.6)] relative">
+              <div className="absolute -top-3 -left-3 bg-green-500 rounded-full p-1">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 sm:h-6 sm:w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <p className="text-white text-base sm:text-lg font-medium">Chiropractors struggling with inconsistent patient flow</p>
+            </div>
+            
+            <div className="bg-opacity-10 bg-white p-3 sm:p-4 md:p-6 rounded-lg border border-green-500 shadow-[0_0_10px_rgba(34,197,94,0.6)] relative">
+              <div className="absolute -top-3 -left-3 bg-green-500 rounded-full p-1">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 sm:h-6 sm:w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <p className="text-white text-base sm:text-lg font-medium">Practice owners spending too much time on marketing instead of patient care</p>
+            </div>
+            
+            <div className="bg-opacity-10 bg-white p-3 sm:p-4 md:p-6 rounded-lg border border-green-500 shadow-[0_0_10px_rgba(34,197,94,0.6)] relative">
+              <div className="absolute -top-3 -left-3 bg-green-500 rounded-full p-1">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 sm:h-6 sm:w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <p className="text-white text-base sm:text-lg font-medium">Chiropractors whose growth is limited by ineffective lead generation</p>
+            </div>
+            
+            <div className="bg-opacity-10 bg-white p-3 sm:p-4 md:p-6 rounded-lg border border-green-500 shadow-[0_0_10px_rgba(34,197,94,0.6)] relative">
+              <div className="absolute -top-3 -left-3 bg-green-500 rounded-full p-1">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 sm:h-6 sm:w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <p className="text-white text-base sm:text-lg font-medium">Practitioners ready to embrace AI and automation to scale their practice</p>
+            </div>
+            
+            {/* Negative Items (Red) */}
+
+            <div className="bg-opacity-10 bg-white p-3 sm:p-4 md:p-6 rounded-lg border border-red-500 shadow-[0_0_10px_rgba(239,68,68,0.6)] relative">
+              <div className="absolute -top-3 -left-3 bg-red-500 rounded-full p-1">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 sm:h-6 sm:w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </div>
+              <p className="text-white text-base sm:text-lg font-medium">NOT for practitioners unwilling to invest in modern marketing solutions</p>
+            </div>
+
+            <div className="bg-opacity-10 bg-white p-3 sm:p-4 md:p-6 rounded-lg border border-red-500 shadow-[0_0_10px_rgba(239,68,68,0.6)] relative">
+              <div className="absolute -top-3 -left-3 bg-red-500 rounded-full p-1">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 sm:h-6 sm:w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </div>
+              <p className="text-white text-base sm:text-lg font-medium">NOT for chiropractors satisfied with their current patient volume</p>
+            </div>
+            
+            
+          </div>
+        </div>
+      </section>
 
       {/* CTA Section */}
-      <section id="contact" className="py-12 sm:py-16 md:py-10 bg-[#0a0a0a] md:pt-44">
+      <section id="contact" className="py-12 sm:py-16 md:py-10 bg-[#0a0a0a] md:pt-10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 sm:mb-8 md:mb-12">
             Want to work with us?
