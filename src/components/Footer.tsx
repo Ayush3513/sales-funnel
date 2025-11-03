@@ -3,51 +3,54 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-b from-[#0a0a0a] to-[#121212] py-8 md:py-12 border-gray-800">
-      <div className="max-w-7xl mx-auto px-4 md:px-6">
+    <footer className="bg-gradient-to-b from-[#0a0a0a] to-[#121212] py-10 border-t border-gray-800">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 md:mb-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mb-10">
           {/* Logo and Company Info */}
-          <div className="flex flex-col items-center md:items-start">
+          <div className="flex flex-col items-center sm:items-start">
             <img 
               src="/assets/logooooo.png" 
               alt="Logo" 
-              className="h-12 md:h-16 w-auto mb-4"
+              className="h-14 w-auto mb-4"
             />
-            <p className="text-gray-400 text-sm max-w-xs text-center md:text-left">
+            <p className="text-gray-400 text-sm max-w-xs text-center sm:text-left">
               Helping chiropractors grow their practice with cutting-edge automation and AI solutions.
             </p>
           </div>
           
           {/* Quick Links */}
-          <div className="flex flex-col items-center md:items-start">
-            <h3 className="text-white font-semibold text-lg mb-4">Quick Links</h3>
-            <Link to="/privacy-policy" className="text-gray-400 text-sm mb-2 hover:text-white transition-colors">
-              Privacy Policy
-            </Link>
-            <Link to="/terms-and-conditions" className="text-gray-400 text-sm hover:text-white transition-colors">
-              Terms & Conditions
-            </Link>
+          <div className="flex flex-col items-center sm:items-start">
+            <h3 className="text-white font-semibold text-lg mb-3">Quick Links</h3>
+            <div className="flex flex-col sm:flex-col items-center sm:items-start space-y-2">
+              <Link to="/privacy-policy" className="text-gray-400 text-sm hover:text-white transition-colors">
+                Privacy Policy
+              </Link>
+              <Link to="/terms-and-conditions" className="text-gray-400 text-sm hover:text-white transition-colors">
+                Terms & Conditions
+              </Link>
+            </div>
           </div>
           
           {/* Contact Info */}
-          <div className="flex flex-col items-center md:items-start">
-            <h3 className="text-white font-semibold text-lg mb-4">Contact Us</h3>
-            <p className="text-gray-400 text-sm mb-2">Email: hello@kraftonexstudios.com</p>
-            <p className="text-gray-400 text-sm">Phone: +1 (555) 884-8091</p>
-            
+          <div className="flex flex-col items-center sm:items-start">
+            <h3 className="text-white font-semibold text-lg mb-3">Contact Us</h3>
+            <div className="flex flex-col items-center sm:items-start space-y-2">
+              <p className="text-gray-400 text-sm">Email: hello@kraftonexstudios.com</p>
+              <p className="text-gray-400 text-sm">Phone: +1 (555) 884-8091</p>
+            </div>
           </div>
         </div>
         
         {/* Bottom Bar with Copyright */}
-        <div className="pt-6 md:pt-8 border-gray-800 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-500 text-sm mb-4 md:mb-0">
+        <div className="pt-6 border-t border-gray-800/30 flex flex-col sm:flex-row justify-between items-center space-y-6 sm:space-y-0">
+          <p className="text-gray-500 text-sm order-2 sm:order-1">
             © {new Date().getFullYear()} Kraftonex Studios All rights reserved.
           </p>
           
-          <div className="flex items-center">
+          <div className="flex items-center order-1 sm:order-2">
             <div className="relative group">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-500 to-white bg-size-200 animate-gradient-x font-bold text-xl md:text-5xl">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-500 to-white bg-size-200 animate-gradient-x font-bold text-2xl sm:text-3xl md:text-4xl">
                 Kraftonex Studios
               </span>
               <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-white to-black group-hover:w-full transition-all duration-700 ease-in-out"></div>

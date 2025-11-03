@@ -1,12 +1,32 @@
 import { Award, Shield } from 'lucide-react';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import testimonialVideo from '../assets/David testimonial - Made with Clipchamp (1).webm';
 import LaserFlow from './components/LaserFlow';
-
+  import ChromaGrid from './components/ChromaGrid'
   
 
+const items = [
+  {
+    image: "https://images.unsplash.com/photo-1699899657680-421c2c2d5064?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aGVhZCUyMHNob3R8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=600",
+    title: "Sarah Johnson",
+    subtitle: "Frontend Developer",
+    handle: "@sarahjohnson",
+    borderColor: "#3B82F6",
+    gradient: "linear-gradient(145deg, #3B82F6, #000)",
+    url: "https://github.com/sarahjohnson"
+  },
+  {
+    image: "https://plus.unsplash.com/premium_photo-1689977807477-a579eda91fa2?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8aGVhZCUyMHNob3R8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=600",
+    title: "Mike Chen",
+    subtitle: "Backend Engineer",
+    handle: "@mikechen",
+    borderColor: "#10B981",
+    gradient: "linear-gradient(180deg, #10B981, #000)",
+    url: "https://linkedin.com/in/mikechen"
+  }
+];
 
 // NOTE: You can also adjust the variables in the shader for super detailed customization
 
@@ -17,6 +37,18 @@ import LaserFlow from './components/LaserFlow';
 
 
 function App() {
+  const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 1024);
+
+  useEffect(() => {
+    // Handle window resize for responsive LaserFlow
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+    
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   useEffect(() => {
     // Using the exact embed code provided, but with cal.com domain
     (function (C, A, L) { 
@@ -69,9 +101,16 @@ function App() {
       <section className="relative overflow-hidden bg-[#000000]">
         {/* LaserFlow Background */}
         <div style={{ height: '100%', width: '100%', position: 'absolute', overflow: 'hidden', zIndex: 0 }}>
-          <LaserFlow horizontalBeamOffset={0}
-        verticalBeamOffset={-0.03}
-        color="#F97719" />
+          <LaserFlow 
+            horizontalBeamOffset={windowWidth < 768 ? -0.1 : 0}
+            verticalBeamOffset={windowWidth < 768 ? -0.1 : -0.03}
+            color="#F97719"
+            horizontalSizing={windowWidth < 768 ? 0.6 : windowWidth < 1024 ? 0.75 : 0.9}
+            verticalSizing={windowWidth < 768 ? 0.8 : 1}
+            fogScale={windowWidth < 768 ? 0.3 : 0.5}
+            wispDensity={windowWidth < 768 ? 0.6 : 1}
+            flowStrength={windowWidth < 768 ? 0.8 : 1}
+          />
         </div>
 
         <div className="relative max-w-7xl mx-auto pt-28 px-4 sm:px-6 lg:px-8 sm:pt-16 md:pt-40 pb-12 sm:pb-24 md:pb-32">
@@ -219,7 +258,18 @@ function App() {
 
       {/* Reviews Section - Inspired by the provided image */}
       <section className="py-16 sm:py-20 bg-b overflow-hidden">
-        
+      
+
+
+<div style={{ height: '600px', position: 'relative' }}>
+  <ChromaGrid 
+    items={items}
+    radius={300}
+    damping={0.45}
+    fadeOut={0.6}
+    ease="power3.out"
+  />
+</div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="relative z-10">
             {/* Section Header */}
