@@ -1,5 +1,8 @@
 import { Phone, Menu, X } from 'lucide-react';
 import { useState } from 'react';
+import PillNav from './PillNav';
+
+
 
 // WhatsApp SVG icon component
 const WhatsAppIcon = () => (
@@ -22,7 +25,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-[#000000] py-7 px-4 md:px-6 shadow-md">
+    <nav className="bg-transparent py-7 px-4 md:px-6  absolute top-0 left-0 right-0 z-[1]">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <div className="flex items-center">
           <img 
@@ -30,8 +33,9 @@ const Navbar = () => {
             alt="Logo" 
             className="h-8 w-auto md:h-10"
           />
+            
         </div>
-        
+      
         {/* Mobile menu button */}
         <div className="flex md:hidden">
           <button 

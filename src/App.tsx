@@ -3,6 +3,18 @@ import { useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import testimonialVideo from '../assets/David testimonial - Made with Clipchamp (1).webm';
+import LaserFlow from './components/LaserFlow';
+
+  
+
+
+// NOTE: You can also adjust the variables in the shader for super detailed customization
+
+// Basic Usage
+
+
+// Image Example Interactive Reveal Effect
+
 
 function App() {
   useEffect(() => {
@@ -51,16 +63,22 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#0a0a0a] text-white">
+    <div className="min-h-screen bg-[#0a0a0a] text-white relative">
       <Navbar />
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-[#000000]">
+        {/* LaserFlow Background */}
+        <div style={{ height: '100%', width: '100%', position: 'absolute', overflow: 'hidden', zIndex: 0 }}>
+          <LaserFlow horizontalBeamOffset={0}
+        verticalBeamOffset={-0.03}
+        color="#F97719" />
+        </div>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-16 md:pt-20 pb-12 sm:pb-24 md:pb-32">
+        <div className="relative max-w-7xl mx-auto pt-28 px-4 sm:px-6 lg:px-8 sm:pt-16 md:pt-40 pb-12 sm:pb-24 md:pb-32">
           <div className="text-center space-y-3 sm:space-y-6 md:space-y-8">
             <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-7xl font-bold leading-tight">
-              We help <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-200 to-gray-400">Chiropractors</span> book an extra{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-orange-500">30 clients</span>{' '}
+              We help Chiropractors book an extra{' '}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-amber-300 ">30 clients</span>{' '}
               in 75 days
             </h1>
 
@@ -104,6 +122,7 @@ function App() {
       {/* Results Section */}
       <section className="py-12 sm:py-16 md:py-5 bg-black">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          
           <div className="text-center space-y-4 sm:space-y-6 mb-8 sm:mb-12 md:mb-16">
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-white drop-shadow-[0_0_10px_rgba(0,0,0,0.8)]">
               Our <span className='text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-orange-500'>Testimonial</span>
@@ -123,6 +142,7 @@ function App() {
             </video>
           </div>
         </div>
+        
       </section>
 
       {/* Who Is This For Section */}
@@ -199,6 +219,7 @@ function App() {
 
       {/* Reviews Section - Inspired by the provided image */}
       <section className="py-16 sm:py-20 bg-b overflow-hidden">
+        
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="relative z-10">
             {/* Section Header */}
@@ -211,6 +232,7 @@ function App() {
 
             {/* Reviews Slider */}
             <div className="relative">
+             
               {/* Decorative Elements */}
               <div className="absolute top-1/2 left-0 w-64 h-64 bg-orange-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 -translate-y-1/2 -translate-x-1/2"></div>
               <div className="absolute bottom-0 right-0 w-80 h-80 bg-amber-300 rounded-full mix-blend-multiply filter blur-3xl opacity-10 translate-x-1/3"></div>
@@ -232,12 +254,9 @@ Kraftonex set up our website and we started getting new appointment bookings rig
                     <div className="mt-auto flex items-center justify-between">
                       <div>
                         <p className="font-medium text-white">SARAH MILLER</p>
-                        <p className="text-sm text-gray-400">PATIENT SINCE 2021</p>
+                        <p className="text-sm text-gray-400">Client Since 2022</p>
                       </div>
-                      <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-amber-400">
-                                               {/* <img src="assets/card3profile.png" alt="Profile" className="w-full h-full object-cover" /> */}
-
-                      </div>
+                      
                     </div>
                   </div>
                 </div>
@@ -258,12 +277,9 @@ Kraftonex set up our website and we started getting new appointment bookings rig
                     <div className="mt-auto flex items-center justify-between">
                       <div>
                         <p className="font-medium text-white">ROBERT CHEN</p>
-                        <p className="text-sm text-gray-400">PATIENT SINCE 2022</p>
+                        <p className="text-sm text-gray-400">Client Since 2022</p>
                       </div>
-                      <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-amber-400">
-                                                {/* <img src="assets/card3profile.png" alt="Profile" className="w-full h-full object-cover" /> */}
-
-                      </div>
+                      
                     </div>
                   </div>
                 </div>
@@ -284,11 +300,9 @@ Kraftonex set up our website and we started getting new appointment bookings rig
                     <div className="mt-auto flex items-center justify-between">
                       <div>
                         <p className="font-medium text-white">JENNIFER TAYLOR</p>
-                        <p className="text-sm text-gray-400">PATIENT SINCE 2020</p>
+                        <p className="text-sm text-gray-400">Client Since 2023</p>
                       </div>
-                      <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-amber-400">
-                        {/* <img src="assets/card3profile.png" alt="Profile" className="w-full h-full object-cover" /> */}
-                      </div>
+                      
                     </div>
                   </div>
                 </div>
