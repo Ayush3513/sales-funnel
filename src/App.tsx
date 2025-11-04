@@ -13,7 +13,7 @@ import LaserFlow from './components/LaserFlow';
 const items = [
   {
     image: "assets/Davidtesti.png",
-    subtitle: "Kraftonex set up our website and we started getting new appointment bookings right away. The dashboard makes tracking leads so easy!",
+    subtitle: "They launched our new site and AI workflows - appointments appeared the same day, and the dashboard shows every step so no lead slips.",
     borderColor: "#3B82F6",
     gradient: "linear-gradient(90deg, #F97618, #000)",
     url: "./assets/David",
@@ -21,7 +21,7 @@ const items = [
   },
   {
     image: "assets/Bentesti.png",
-    subtitle: "Their AI follows up with missed calls and online leads 24/7. So many new patients have come through that would have been lost!",
+    subtitle: "Their 24/7 AI turns missed calls and late-night forms into booked patients those ‘lost’ conversations suddenly convert.",
     borderColor: "#10B981",
     gradient: "linear-gradient(180deg, #F97618, #000)",
     url: "https://linkedin.com/in/mikechen",
@@ -29,7 +29,7 @@ const items = [
   },
   {
     image: "assets/marie.png",
-    subtitle: "Our Facebook ads now fill our calendar. Kraftonex knows how to bring in real patients no more guessing or wasted budget.",
+    subtitle: "They keep us fully booked while the AI ecosystem qualifies real patients, no wasted spend, just steady growth.",
     borderColor: "#10B981",
     gradient: "linear-gradient(180deg, #F97618, #000)",
     url: "https://linkedin.com/in/mikechen",
