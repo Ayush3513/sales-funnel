@@ -137,7 +137,7 @@ function App() {
 
             <div className="pt-2 sm:pt-4">
               <p className="text-sm sm:text-xl text-amber-200 font-semibold mb-3 sm:mb-8">
-                (WE OFFER IT ONE WEEK FOR FREE)
+                (WE OFFER IT WITH REFUND POLICY)
               </p>
 
               <a
@@ -168,7 +168,7 @@ function App() {
      
 
       {/* Results Section */}
-      <section className="py-12 sm:py-16 md:py-5 bg-black pt-28 sm:pt-16 md:pt-40">
+      <section className="py-2 sm:py-16 md:py-5 bg-black pt-16 sm:pt-16 md:pt-24">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center space-y-4 sm:space-y-6 mb-8 sm:mb-12 md:mb-16">
@@ -194,7 +194,7 @@ function App() {
       </section>
 
       {/* Who Is This For Section */}
-      <section className="py-12 sm:py-16 md:py-40 bg-gradient-to-b from-black to-[#0a0a0a]">
+      <section className=" pt-16 sm:py-16 md:py-24 bg-gradient-to-b from-black to-[#0a0a0a]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-4 sm:space-y-6 mb-8 sm:mb-12">
             <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white">
@@ -266,7 +266,7 @@ function App() {
       </section>
 
       {/* Reviews Section - Inspired by the provided image */}
-      <section className="py-16 sm:py-20 bg-b  h-auto overflow-hidden">
+      <section className="py-16 sm:py-0 sm:pb-24 bg-b  h-auto overflow-hidden">
 
 
 

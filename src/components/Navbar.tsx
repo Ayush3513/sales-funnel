@@ -1,6 +1,4 @@
-import { Phone, Menu, X } from 'lucide-react';
-import { useState } from 'react';
-import PillNav from './PillNav';
+import { Phone } from 'lucide-react';
 
 
 
@@ -18,11 +16,6 @@ const WhatsAppIcon = () => (
 );
 
 const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
 
   return (
     <nav className="bg-transparent py-7 px-4 md:px-6  absolute top-0 left-0 right-0 z-[1]">
@@ -38,12 +31,14 @@ const Navbar = () => {
       
         {/* Mobile menu button */}
         <div className="flex md:hidden">
-          <button 
-            onClick={toggleMenu}
+          <a 
+            href="https://wa.me/15558848091" 
+            target="_blank" 
+            rel="noopener noreferrer"
             className="text-white mr-4"
           >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+            <WhatsAppIcon />
+          </a>
         </div>
 
         {/* Desktop WhatsApp button */}
@@ -65,25 +60,6 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile menu */}
-      {isMenuOpen && (
-        <div className="md:hidden mt-4 py-4 border-t border-gray-800">
-          <a 
-            href="https://wa.me/15558848091" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="flex items-center justify-center gap-3 text-white py-3"
-          >
-            <div className="relative">
-              <div className="absolute inset-0 bg-green-500 rounded-full blur-md animate-pulse"></div>
-              <div className="relative flex items-center justify-center w-10 h-10 bg-green-600 hover:bg-green-700 rounded-full transition-all shadow-lg">
-                <WhatsAppIcon />
-              </div>
-            </div>
-            <span>+1 (555) 884-8091</span>
-          </a>
-        </div>
-      )}
     </nav>
   );
 };

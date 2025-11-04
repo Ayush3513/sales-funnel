@@ -8,21 +8,21 @@ const Footer = () => {
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mb-10">
           {/* Logo and Company Info */}
-          <div className="flex flex-col items-center sm:items-start">
+          <div className="flex flex-col items-start">
             <img 
               src="/assets/logooooo.png" 
               alt="Logo" 
               className="h-14 w-auto mb-4"
             />
-            <p className="text-gray-400 text-sm max-w-xs text-center sm:text-left">
+            <p className="text-gray-400 text-sm max-w-xs text-left">
               Helping chiropractors grow their practice with cutting-edge automation and AI solutions.
             </p>
           </div>
           
           {/* Quick Links */}
-          <div className="flex flex-col items-center sm:items-start">
+          <div className="flex flex-col items-start">
             <h3 className="text-white font-semibold text-lg mb-3">Quick Links</h3>
-            <div className="flex flex-col sm:flex-col items-center sm:items-start space-y-2">
+            <div className="flex flex-col items-start space-y-2">
               <Link to="/privacy-policy" className="text-gray-400 text-sm hover:text-white transition-colors">
                 Privacy Policy
               </Link>
@@ -33,9 +33,9 @@ const Footer = () => {
           </div>
           
           {/* Contact Info */}
-          <div className="flex flex-col items-center sm:items-start">
+          <div className="flex flex-col items-start">
             <h3 className="text-white font-semibold text-lg mb-3">Contact Us</h3>
-            <div className="flex flex-col items-center sm:items-start space-y-2">
+            <div className="flex flex-col items-start space-y-2">
               <p className="text-gray-400 text-sm">Email: hello@kraftonexstudios.com</p>
               <p className="text-gray-400 text-sm">Phone: +1 (555) 884-8091</p>
             </div>
@@ -43,8 +43,8 @@ const Footer = () => {
         </div>
         
         {/* Bottom Bar with Copyright */}
-        <div className="pt-6 border-t border-gray-800/30 flex flex-col sm:flex-row justify-between items-center space-y-6 sm:space-y-0">
-          <p className="text-gray-500 text-sm order-2 sm:order-1">
+        <div className="pt-6 border-t border-gray-800/30 flex flex-col sm:flex-row justify-between items-start sm:items-center space-y-6 sm:space-y-0">
+          <p className="text-gray-500 text-sm order-2 sm:order-1 text-left">
             © {new Date().getFullYear()} Kraftonex Studios All rights reserved.
           </p>
           
