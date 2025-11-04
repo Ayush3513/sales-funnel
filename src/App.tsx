@@ -4,7 +4,10 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import testimonialVideo from '../assets/David testimonial - Made with Clipchamp (1).webm';
 import LaserFlow from './components/LaserFlow';
-  import ChromaGrid from './components/ChromaGrid'
+  import Card from './components/reviewCards';
+  
+
+  
   
 
 const items = [
@@ -13,21 +16,24 @@ const items = [
     subtitle: "Kraftonex set up our website and we started getting new appointment bookings right away. The dashboard makes tracking leads so easy!",
     borderColor: "#3B82F6",
     gradient: "linear-gradient(90deg, #F97618, #000)",
-    url: "./assets/David"
+    url: "./assets/David",
+    name: "Dr. David"
   },
   {
     image: "assets/Bentesti.png",
     subtitle: "Their AI follows up with missed calls and online leads 24/7. So many new patients have come through that would have been lost!",
     borderColor: "#10B981",
     gradient: "linear-gradient(180deg, #F97618, #000)",
-    url: "https://linkedin.com/in/mikechen"
+    url: "https://linkedin.com/in/mikechen",
+    name: "Dr. Ben"
   },
   {
     image: "assets/marie.png",
     subtitle: "Our Facebook ads now fill our calendar. Kraftonex knows how to bring in real patients no more guessing or wasted budget.",
     borderColor: "#10B981",
     gradient: "linear-gradient(180deg, #F97618, #000)",
-    url: "https://linkedin.com/in/mikechen"
+    url: "https://linkedin.com/in/mikechen",
+    name: "Dr. Maria"
   }
 ];
 
@@ -105,13 +111,13 @@ function App() {
         {/* LaserFlow Background */}
         <div style={{ height: '100%', width: '100%', position: 'absolute', overflow: 'hidden', zIndex: 0 }}>
           <LaserFlow 
-            horizontalBeamOffset={windowWidth < 768 ? -0.1 : 0}
-            verticalBeamOffset={windowWidth < 768 ? -0.1 : -0.03}
+            horizontalBeamOffset={windowWidth < 768 ? 0.0 : 0}
+            verticalBeamOffset={windowWidth < 768 ? -0.49 : -0.5}
             color="#F97719"
-            horizontalSizing={windowWidth < 768 ? 0.6 : windowWidth < 1024 ? 0.75 : 0.9}
+            horizontalSizing={windowWidth < 768 ? 2 : windowWidth < 1024 ? 0.75 : 0.9}
             verticalSizing={windowWidth < 768 ? 0.8 : 1}
-            fogScale={windowWidth < 768 ? 0.3 : 0.5}
-            wispDensity={windowWidth < 768 ? 0.6 : 1}
+            fogScale={windowWidth < 768 ? 0.9 : 0.5}
+            wispDensity={windowWidth < 768 ? 0.8 : 1}
             flowStrength={windowWidth < 768 ? 0.8 : 1}
           />
         </div>
@@ -146,23 +152,23 @@ function App() {
           </div>
 
           {/* Calendar Section */}
-          <div id="calendar" className="mt-10 sm:mt-12 md:mt-16 max-w-5xl mx-auto">
+          
+
+          
+        </div>
+      </section>
+            <div id="calendar" className="  max-w-5xl mx-auto bg-[#000000]">
             <div
               style={{ width: '100%', height: '100%', overflow: 'auto' }}
               id="my-cal-inline-consultation"
               className="rounded-lg bg-black shadow-[0_0_30px_rgba(0,0,0,0.5)] border border-gray-800"
             ></div>
           </div>
-
-          
-        </div>
-      </section>
-
       {/* Video Section */}
      
 
       {/* Results Section */}
-      <section className="py-12 sm:py-16 md:py-5 bg-black">
+      <section className="py-12 sm:py-16 md:py-5 bg-black pt-28 sm:pt-16 md:pt-40">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center space-y-4 sm:space-y-6 mb-8 sm:mb-12 md:mb-16">
@@ -260,7 +266,7 @@ function App() {
       </section>
 
       {/* Reviews Section - Inspired by the provided image */}
-      <section className="py-16 sm:py-20 bg-b  h-[300vh] overflow-hidden">
+      <section className="py-16 sm:py-20 bg-b  h-auto overflow-hidden">
 
 
 
@@ -270,19 +276,23 @@ function App() {
             {/* Section Header */}
             <div className="text-center mb-12">
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">
-               Chiropractors <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-orange-500">SUCCESS</span> Stories<br />
+               Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-orange-500">Success</span> Stories<br />
               </h2>
               
             </div>
-        <div style={{ height: '600px', position: 'relative' }}>
-  <ChromaGrid 
-    items={items}
-    radius={windowWidth < 768 ? 150 : 300}
-    damping={0.45}
-    fadeOut={0.6}
-    ease="power3.out"
-  />
-</div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {items.map((item, index) => (
+            <Card
+              key={index}
+              image={item.image}
+              subtitle={item.subtitle}
+              borderColor={item.borderColor}
+              gradient={item.gradient}
+              url={item.url}
+              name={item.name}
+            />
+          ))}
+        </div>
         
            
           </div>
