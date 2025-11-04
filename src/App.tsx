@@ -9,21 +9,24 @@ import LaserFlow from './components/LaserFlow';
 
 const items = [
   {
-    image: "https://images.unsplash.com/photo-1699899657680-421c2c2d5064?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aGVhZCUyMHNob3R8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=600",
-    title: "Sarah Johnson",
-    subtitle: "Frontend Developer",
-    handle: "@sarahjohnson",
+    image: "assets/Davidtesti.png",
+    subtitle: "Kraftonex set up our website and we started getting new appointment bookings right away. The dashboard makes tracking leads so easy!",
     borderColor: "#3B82F6",
-    gradient: "linear-gradient(145deg, #3B82F6, #000)",
-    url: "https://github.com/sarahjohnson"
+    gradient: "linear-gradient(90deg, #F97618, #000)",
+    url: "./assets/David"
   },
   {
-    image: "https://plus.unsplash.com/premium_photo-1689977807477-a579eda91fa2?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8aGVhZCUyMHNob3R8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=600",
-    title: "Mike Chen",
-    subtitle: "Backend Engineer",
-    handle: "@mikechen",
+    image: "assets/Bentesti.png",
+    subtitle: "Their AI follows up with missed calls and online leads 24/7. So many new patients have come through that would have been lost!",
     borderColor: "#10B981",
-    gradient: "linear-gradient(180deg, #10B981, #000)",
+    gradient: "linear-gradient(180deg, #F97618, #000)",
+    url: "https://linkedin.com/in/mikechen"
+  },
+  {
+    image: "assets/marie.png",
+    subtitle: "Our Facebook ads now fill our calendar. Kraftonex knows how to bring in real patients no more guessing or wasted budget.",
+    borderColor: "#10B981",
+    gradient: "linear-gradient(180deg, #F97618, #000)",
     url: "https://linkedin.com/in/mikechen"
   }
 ];
@@ -257,19 +260,11 @@ function App() {
       </section>
 
       {/* Reviews Section - Inspired by the provided image */}
-      <section className="py-16 sm:py-20 bg-b overflow-hidden">
-      
+      <section className="py-16 sm:py-20 bg-b  h-[300vh] overflow-hidden">
 
 
-<div style={{ height: '600px', position: 'relative' }}>
-  <ChromaGrid 
-    items={items}
-    radius={300}
-    damping={0.45}
-    fadeOut={0.6}
-    ease="power3.out"
-  />
-</div>
+
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="relative z-10">
             {/* Section Header */}
@@ -279,88 +274,17 @@ function App() {
               </h2>
               
             </div>
-
-            {/* Reviews Slider */}
-            <div className="relative">
-             
-              {/* Decorative Elements */}
-              <div className="absolute top-1/2 left-0 w-64 h-64 bg-orange-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 -translate-y-1/2 -translate-x-1/2"></div>
-              <div className="absolute bottom-0 right-0 w-80 h-80 bg-amber-300 rounded-full mix-blend-multiply filter blur-3xl opacity-10 translate-x-1/3"></div>
-              
-              {/* Reviews Cards */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {/* Review Card 1 */}
-                <div className="bg-[#1F1F1F] from-gray-800 to-gray-900 rounded-2xl overflow-hidden">
-                  <div className="p-8 h-full flex flex-col">
-                    
-                    
-                    <h3 className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-orange-500 mb-4">
-                      GAME-CHANGER FOR MY CLINIC!
-                    </h3>
-                    
-                    <p className="text-gray-300 mb-6">
-Kraftonex set up our website and we started getting new appointment bookings right away. The dashboard makes tracking leads so easy!              </p>
-                    
-                    <div className="mt-auto flex items-center justify-between">
-                      <div>
-                        <p className="font-medium text-white">SARAH MILLER</p>
-                        <p className="text-sm text-gray-400">Client Since 2022</p>
-                      </div>
-                      
-                    </div>
-                  </div>
-                </div>
-                
-                {/* Review Card 2 */}
-                <div className="bg-[#1F1F1F] from-gray-800 to-gray-900 rounded-2xl overflow-hidden">
-                  <div className="p-8 h-full flex flex-col">
-                  
-                    
-                    <h3 className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-orange-500 mb-4">
-                      NO MORE LOST LEADS EVER!
-                    </h3>
-                    
-                    <p className="text-gray-300 mb-6">
-                      Their AI follows up with missed calls and online leads 24/7. So many new patients have come through that would have been lost!
-                    </p>
-                    
-                    <div className="mt-auto flex items-center justify-between">
-                      <div>
-                        <p className="font-medium text-white">ROBERT CHEN</p>
-                        <p className="text-sm text-gray-400">Client Since 2022</p>
-                      </div>
-                      
-                    </div>
-                  </div>
-                </div>
-                
-                {/* Review Card 3 */}
-                <div className="bg-[#1F1F1F] from-gray-800 to-gray-900 rounded-2xl overflow-hidden">
-                  <div className="p-8 h-full flex flex-col">
-                    
-                    
-                    <h3 className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-orange-500 mb-4">
-                      TRANSPARENT, PROFESSIONAL
-                    </h3>
-                    
-                    <p className="text-gray-300 mb-6">
-                      Our Facebook ads now fill our calendar. Kraftonex knows how to bring in real patients no more guessing or wasted budget.
-                    </p>
-                    
-                    <div className="mt-auto flex items-center justify-between">
-                      <div>
-                        <p className="font-medium text-white">JENNIFER TAYLOR</p>
-                        <p className="text-sm text-gray-400">Client Since 2023</p>
-                      </div>
-                      
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              {/* Slider Indicator */}
-              
-            </div>
+        <div style={{ height: '600px', position: 'relative' }}>
+  <ChromaGrid 
+    items={items}
+    radius={windowWidth < 768 ? 150 : 300}
+    damping={0.45}
+    fadeOut={0.6}
+    ease="power3.out"
+  />
+</div>
+        
+           
           </div>
         </div>
       </section>
