@@ -97,10 +97,7 @@ function App() {
     });
     
     // Configure UI
-    window.Cal.ns.consultation("ui", {
-      "hideEventTypeDetails": false,
-      "layout": "month_view"
-    });
+    window.Cal.ns.consultation("ui", {"theme":"dark","hideEventTypeDetails":false,"layout":"month_view"});
   }, []);
 
   return (
