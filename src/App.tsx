@@ -175,7 +175,7 @@ function App() {
 
           </div>
 
-          <div className="px-6 max-w-4xl mx-auto rounded-xl overflow-hidden shadow-[0_0_20px_rgba(255,255,255,0.9)] border border-gray-800">
+          <div className="mx-6 md:mx-auto max-w-4xl rounded-xl overflow-hidden shadow-[0_0_20px_rgba(255,255,255,0.9)] border border-gray-800">
             <video
               className="w-full"
               controls
