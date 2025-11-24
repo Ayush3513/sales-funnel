@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
@@ -9,16 +9,16 @@ const Footer = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mb-10">
           {/* Logo and Company Info */}
           <div className="flex flex-col items-start">
-            <img 
-              src="/assets/logooooo.png" 
-              alt="Logo" 
+            <img
+              src="/assets/logooooo.png"
+              alt="Logo"
               className="h-14 w-auto mb-4"
             />
             <p className="text-gray-400 text-sm max-w-xs text-left">
               Helping chiropractors grow their practice with cutting-edge automation and AI solutions.
             </p>
           </div>
-          
+
           {/* Quick Links */}
           <div className="flex flex-col items-start">
             <h3 className="text-white font-semibold text-lg mb-3">Quick Links</h3>
@@ -31,7 +31,7 @@ const Footer = () => {
               </Link>
             </div>
           </div>
-          
+
           {/* Contact Info */}
           <div className="flex flex-col items-start">
             <h3 className="text-white font-semibold text-lg mb-3">Contact Us</h3>
@@ -41,13 +41,13 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        
+
         {/* Bottom Bar with Copyright */}
         <div className="pt-6 border-t border-gray-800/30 flex flex-col sm:flex-row justify-between items-start sm:items-center space-y-6 sm:space-y-0">
           <p className="text-gray-500 text-sm order-2 sm:order-1 text-left">
             © {new Date().getFullYear()} Kraftonex Studios All rights reserved.
           </p>
-          
+
           <div className="flex items-center order-1 sm:order-2">
             <div className="relative group">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-500 to-white bg-size-200 animate-gradient-x font-bold text-2xl sm:text-3xl md:text-4xl">
