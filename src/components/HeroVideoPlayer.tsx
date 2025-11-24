@@ -55,6 +55,35 @@ const HeroVideoPlayer: React.FC<HeroVideoPlayerProps> = ({ videoSrc }) => {
         }
     };
 
+    const controlsTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+    const handleActivity = () => {
+        setShowControls(true);
+        if (controlsTimeoutRef.current) {
+            clearTimeout(controlsTimeoutRef.current);
+        }
+        if (isPlaying) {
+            controlsTimeoutRef.current = setTimeout(() => {
+                setShowControls(false);
+            }, 1500);
+        }
+    };
+
+    useEffect(() => {
+        if (isPlaying) {
+            if (controlsTimeoutRef.current) clearTimeout(controlsTimeoutRef.current);
+            controlsTimeoutRef.current = setTimeout(() => {
+                setShowControls(false);
+            }, 1500);
+        } else {
+            setShowControls(true);
+            if (controlsTimeoutRef.current) clearTimeout(controlsTimeoutRef.current);
+        }
+        return () => {
+            if (controlsTimeoutRef.current) clearTimeout(controlsTimeoutRef.current);
+        };
+    }, [isPlaying]);
+
     useEffect(() => {
         const handleEscape = (e: KeyboardEvent) => {
             if (e.key === 'Escape' && showModal) {
@@ -114,8 +143,9 @@ const HeroVideoPlayer: React.FC<HeroVideoPlayerProps> = ({ videoSrc }) => {
 
                             <div
                                 className={`absolute inset-0 bg-black/20 transition-opacity duration-300 ${showControls || !isPlaying ? 'opacity-100' : 'opacity-0'}`}
-                                onMouseEnter={() => setShowControls(true)}
-                                onMouseLeave={() => setShowControls(false)}
+                                onMouseMove={handleActivity}
+                                onTouchStart={handleActivity}
+                                onClick={handleActivity}
                             >
                                 <div className="absolute inset-0 flex items-center justify-center">
                                     <div
