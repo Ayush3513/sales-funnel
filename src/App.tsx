@@ -1,9 +1,10 @@
 import { Award, Shield } from 'lucide-react';
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState } from 'react';
+import Cal, { getCalApi } from "@calcom/embed-react";
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import testimonialVideo from '../assets/David testimonial - Made with Clipchamp (1).webm';
-import HeroVideo from '../assets/HeroVideo.webm';
+import HeroVideo from '../assets/HeroVideo.mp4';
 // import LaserFlow from './components/LaserFlow';
 import HeroVideoPlayer from './components/HeroVideoPlayer';
 import Card from './components/reviewCards';
@@ -51,7 +52,7 @@ function App() {
   // const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 1024);
   const [showSticky, setShowSticky] = useState(false);
   const [timeLeft, setTimeLeft] = useState({ hours: 14, minutes: 0, seconds: 0 });
-  const calInitialized = useRef(false);
+
 
   useEffect(() => {
     // Suppress specific warnings from external libraries (Cal.com) that cannot be fixed in our code
@@ -135,49 +136,11 @@ function App() {
   // }, []);
 
   useEffect(() => {
-    if (calInitialized.current) return;
-    calInitialized.current = true;
-
-    // Using the exact embed code provided, but with cal.com domain
-    (function (C, A, L) {
-      let p = function (a, ar) { a.q.push(ar); };
-      let d = C.document;
-      C.Cal = C.Cal || function () {
-        let ar = arguments;
-        if (!C.Cal.loaded) {
-          C.Cal.ns = {};
-          C.Cal.q = C.Cal.q || [];
-          d.head.appendChild(d.createElement("script")).src = A;
-          C.Cal.loaded = true;
-        }
-        if (ar[0] === L) {
-          const api = function () { p(api, arguments); };
-          const namespace = ar[1];
-          api.q = api.q || [];
-          if (typeof namespace === "string") {
-            C.Cal.ns[namespace] = C.Cal.ns[namespace] || api;
-            p(C.Cal.ns[namespace], ar);
-            p(C.Cal, ["initNamespace", namespace]);
-          } else p(C.Cal, ar);
-          return;
-        }
-        p(C.Cal, ar);
-      };
-    })(window, "https://cal.com/embed/embed.js", "init");
-
-    // Initialize Cal
-    window.Cal("init", "consultation", { origin: "https://cal.com" });
-
-    // Set up the inline calendar
-    window.Cal.ns.consultation("inline", {
-      elementOrSelector: "#my-cal-inline-consultation",
-      config: { "layout": "month_view" },
-      calLink: "kraftonexstudios/consultation",
-    });
-
-    // Configure UI
-    window.Cal.ns.consultation("ui", { "theme": "dark", "hideEventTypeDetails": false, "layout": "month_view" });
-  }, []);
+    (async function () {
+      const cal = await getCalApi({ "namespace": "default", "embedLibUrl": "https://cal.id/embed-link/embed.js" });
+      cal("ui", { "theme": "dark", "cssVarsPerTheme": { "light": { "cal-brand": "#007ee5" }, "dark": { "cal-brand": "#F97618" } }, "hideEventTypeDetails": false, "layout": "month_view" });
+    })();
+  }, [])
 
   const scrollToCalendar = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
@@ -284,11 +247,16 @@ function App() {
         <h3 className="text-xl md:text-5xl font-bold text-white mt-2 mb-4 text-center">
           Step 2: <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-orange-500">Book a Quick Call</span>
         </h3>
-        <div
-          style={{ width: '100%', height: '100%', overflow: 'auto' }}
-          id="my-cal-inline-consultation"
-          className="rounded-lg bg-black shadow-[0_0_30px_rgba(0,0,0,0.5)] border border-gray-800"
-        ></div>
+        <div className="rounded-lg bg-black shadow-[0_0_30px_rgba(0,0,0,0.5)] border border-gray-800">
+          <Cal
+            namespace="default"
+            calLink="ayush-chavda/strategycall"
+            style={{ width: "100%" }}
+            config={{ "layout": "month_view" }}
+            calOrigin="https://cal.id"
+            embedJsUrl="https://cal.id/embed-link/embed.js"
+          />
+        </div>
       </div>
       {/* Video Section */}
 

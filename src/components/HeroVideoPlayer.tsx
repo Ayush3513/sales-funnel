@@ -98,17 +98,18 @@ const HeroVideoPlayer: React.FC<HeroVideoPlayerProps> = ({ videoSrc }) => {
         <>
             {/* Thumbnail/Preview */}
             <div
-                className="relative w-[60vw] sm:w-full sm:max-w-[240px] mx-auto rounded-2xl overflow-hidden shadow-[0_0_60px_rgba(249,118,24,0.6)] border border-gray-800 group cursor-pointer"
+                className="relative w-[60vw] sm:w-full sm:max-w-[240px] mx-auto rounded-2xl overflow-hidden shadow-[0_0_60px_rgba(249,118,24,0.6)] border border-gray-800 group cursor-pointer aspect-[9/16] bg-gray-900"
                 onMouseEnter={() => setShowControls(true)}
                 onMouseLeave={() => setShowControls(false)}
                 onClick={openModal}
             >
                 <video
                     ref={videoRef}
-                    className="w-full h-auto object-cover"
+                    className="w-full h-full object-cover"
                     loop
                     muted
                     playsInline
+                    preload="auto"
                     src={videoSrc}
                 />
 
