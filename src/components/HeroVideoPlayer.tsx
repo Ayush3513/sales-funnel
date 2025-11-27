@@ -1,88 +1,33 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { Play, Pause, Volume2, VolumeX, X } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Play } from 'lucide-react';
 
 interface HeroVideoPlayerProps {
-    videoSrc: string;
+    videoId: string;
 }
 
-const HeroVideoPlayer: React.FC<HeroVideoPlayerProps> = ({ videoSrc }) => {
-    const videoRef = useRef<HTMLVideoElement>(null);
-    const modalVideoRef = useRef<HTMLVideoElement>(null);
-    const [isPlaying, setIsPlaying] = useState(false);
-    const [isMuted, setIsMuted] = useState(false);
-    const [showControls, setShowControls] = useState(false);
+const HeroVideoPlayer: React.FC<HeroVideoPlayerProps> = ({ videoId }) => {
     const [showModal, setShowModal] = useState(false);
+    const [thumbnailUrl, setThumbnailUrl] = useState<string>('');
 
     const openModal = () => {
         setShowModal(true);
-        setIsPlaying(true);
-        setTimeout(() => {
-            if (modalVideoRef.current) {
-                modalVideoRef.current.play();
-            }
-        }, 100);
     };
 
     const closeModal = () => {
         setShowModal(false);
-        setIsPlaying(false);
-        if (modalVideoRef.current) {
-            modalVideoRef.current.pause();
-            modalVideoRef.current.currentTime = 0;
-        }
-    };
-
-    const togglePlay = () => {
-        if (!showModal) {
-            openModal();
-        } else {
-            if (modalVideoRef.current) {
-                if (isPlaying) {
-                    modalVideoRef.current.pause();
-                } else {
-                    modalVideoRef.current.play();
-                }
-                setIsPlaying(!isPlaying);
-            }
-        }
-    };
-
-    const toggleMute = (e: React.MouseEvent) => {
-        e.stopPropagation();
-        if (modalVideoRef.current) {
-            modalVideoRef.current.muted = !isMuted;
-            setIsMuted(!isMuted);
-        }
-    };
-
-    const controlsTimeoutRef = useRef<NodeJS.Timeout | null>(null);
-
-    const handleActivity = () => {
-        setShowControls(true);
-        if (controlsTimeoutRef.current) {
-            clearTimeout(controlsTimeoutRef.current);
-        }
-        if (isPlaying) {
-            controlsTimeoutRef.current = setTimeout(() => {
-                setShowControls(false);
-            }, 1500);
-        }
     };
 
     useEffect(() => {
-        if (isPlaying) {
-            if (controlsTimeoutRef.current) clearTimeout(controlsTimeoutRef.current);
-            controlsTimeoutRef.current = setTimeout(() => {
-                setShowControls(false);
-            }, 1500);
-        } else {
-            setShowControls(true);
-            if (controlsTimeoutRef.current) clearTimeout(controlsTimeoutRef.current);
-        }
-        return () => {
-            if (controlsTimeoutRef.current) clearTimeout(controlsTimeoutRef.current);
-        };
-    }, [isPlaying]);
+        // Fetch Vimeo thumbnail
+        fetch(`https://vimeo.com/api/v2/video/${videoId}.json`)
+            .then(response => response.json())
+            .then(data => {
+                if (data && data[0]) {
+                    setThumbnailUrl(data[0].thumbnail_large);
+                }
+            })
+            .catch(error => console.error('Error fetching Vimeo thumbnail:', error));
+    }, [videoId]);
 
     useEffect(() => {
         const handleEscape = (e: KeyboardEvent) => {
@@ -99,21 +44,15 @@ const HeroVideoPlayer: React.FC<HeroVideoPlayerProps> = ({ videoSrc }) => {
             {/* Thumbnail/Preview */}
             <div
                 className="relative w-[60vw] sm:w-full sm:max-w-[240px] mx-auto rounded-2xl overflow-hidden shadow-[0_0_60px_rgba(249,118,24,0.6)] border border-gray-800 group cursor-pointer aspect-[9/16] bg-gray-900"
-                onMouseEnter={() => setShowControls(true)}
-                onMouseLeave={() => setShowControls(false)}
                 onClick={openModal}
             >
-                <video
-                    ref={videoRef}
-                    className="w-full h-full object-cover"
-                    loop
-                    muted
-                    playsInline
-                    preload="auto"
-                    src={videoSrc}
-                />
-
-                <div className="absolute inset-0 bg-black/30 transition-opacity duration-300 opacity-100"></div>
+                {thumbnailUrl && (
+                    <img
+                        src={thumbnailUrl}
+                        alt="Video Thumbnail"
+                        className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300"
+                    />
+                )}
 
                 <div className="absolute inset-0 flex items-center justify-center transition-opacity duration-300">
                     <div className="bg-white/20 backdrop-blur-sm p-4 rounded-full hover:bg-white/30 transition-all transform hover:scale-110">
@@ -129,58 +68,22 @@ const HeroVideoPlayer: React.FC<HeroVideoPlayerProps> = ({ videoSrc }) => {
                     onClick={closeModal}
                 >
                     <div
-                        className="relative w-full max-w-[90vw] sm:max-w-[400px] md:max-w-[500px] h-[80vh] flex items-center justify-center"
+                        className="relative w-auto h-[80vh] max-h-[90vh] aspect-[9/16] flex items-center justify-center"
                         onClick={(e) => e.stopPropagation()}
                     >
-                        <div className="relative w-full h-full flex items-center justify-center">
-                            <video
-                                ref={modalVideoRef}
-                                className="w-full h-full object-contain rounded-2xl"
-                                loop
-                                playsInline
-                                src={videoSrc}
-                                onClick={togglePlay}
-                            />
-
-                            <div
-                                className={`absolute inset-0 bg-black/20 transition-opacity duration-300 ${showControls || !isPlaying ? 'opacity-100' : 'opacity-0'}`}
-                                onMouseMove={handleActivity}
-                                onTouchStart={handleActivity}
-                                onClick={handleActivity}
-                            >
-                                <div className="absolute inset-0 flex items-center justify-center">
-                                    <div
-                                        className="bg-white/20 backdrop-blur-sm p-4 rounded-full hover:bg-white/30 transition-all transform hover:scale-110 cursor-pointer"
-                                        onClick={togglePlay}
-                                    >
-                                        {isPlaying ? (
-                                            <Pause className="w-10 h-10 text-white fill-current" />
-                                        ) : (
-                                            <Play className="w-10 h-10 text-white fill-current ml-1" />
-                                        )}
-                                    </div>
-                                </div>
-
-                                <button
-                                    onClick={toggleMute}
-                                    className="absolute bottom-6 right-6 bg-black/50 backdrop-blur-md p-3 rounded-full hover:bg-black/70 transition-all transform hover:scale-105"
-                                >
-                                    {isMuted ? (
-                                        <VolumeX className="w-6 h-6 text-white" />
-                                    ) : (
-                                        <Volume2 className="w-6 h-6 text-white" />
-                                    )}
-                                </button>
-                            </div>
+                        <div className="relative w-full h-full flex items-center justify-center bg-black rounded-2xl overflow-hidden border border-gray-800">
+                            <iframe
+                                src={`https://player.vimeo.com/video/${videoId}?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1`}
+                                frameBorder="0"
+                                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                                referrerPolicy="strict-origin-when-cross-origin"
+                                className="w-full h-full"
+                                title="Vimeo Video"
+                            ></iframe>
+                            <script src="https://player.vimeo.com/api/player.js"></script>
                         </div>
 
-                        {/* Aesthetic Close Button */}
-                        <button
-                            onClick={closeModal}
-                            className="absolute top-4 right-4 bg-white/10 backdrop-blur-md p-3 rounded-full border-2 border-white/30 hover:bg-white/20 hover:border-white/50 transition-all transform hover:scale-110 hover:rotate-90 z-10 group"
-                        >
-                            <X className="w-6 h-6 text-white group-hover:text-white transition-colors" />
-                        </button>
+
                     </div>
                 </div>
             )}

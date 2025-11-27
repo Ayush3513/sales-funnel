@@ -4,7 +4,6 @@ import Cal, { getCalApi } from "@calcom/embed-react";
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import testimonialVideo from '../assets/David testimonial - Made with Clipchamp (1).webm';
-import HeroVideo from '../assets/HeroVideo.mp4';
 // import LaserFlow from './components/LaserFlow';
 import HeroVideoPlayer from './components/HeroVideoPlayer';
 import Card from './components/reviewCards';
@@ -213,7 +212,7 @@ function App() {
                 <h3 className="text-xl font-bold text-white mb-4 text-center">
                   Step 1: <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-orange-500">Watch the Video</span>
                 </h3>
-                <HeroVideoPlayer videoSrc={HeroVideo} />
+                <HeroVideoPlayer videoId="1141099051" />
               </div>
 
               <div className="pt-4 hidden sm:flex flex-col items-center sm:items-start order-4">
@@ -237,7 +236,7 @@ function App() {
               <h3 className="text-xl font-bold text-white mb-4 text-center">
                 Step 1: <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-orange-500">Watch the Video</span>
               </h3>
-              <HeroVideoPlayer videoSrc={HeroVideo} />
+              <HeroVideoPlayer videoId="1141099051" />
             </div>
           </div>
         </div>
@@ -758,30 +757,35 @@ function App() {
 
       {/* Sticky CTA Bar */}
       <div className={`fixed bottom-0 left-0 right-0 z-50 transition-all duration-500 transform ${showSticky ? 'translate-y-0 opacity-100' : 'translate-y-full opacity-0'}`}>
-        <div className="bg-gray-900/90 backdrop-blur-xl border-t border-orange-500/30 shadow-[0_-4px_20px_rgba(249,119,25,0.15)] pb-safe">
+        <div className="bg-white/90 backdrop-blur-xl border-t border-gray-200 shadow-[0_-4px_20px_rgba(0,0,0,0.1)] pb-safe">
           <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8 py-4">
-            <div className="flex items-center justify-between gap-4">
+            <div className="flex items-center justify-between gap-2 sm:gap-4">
               {/* Text - Hidden on very small screens, visible on larger mobile & desktop */}
               <div className="hidden sm:block">
-                <p className="text-white font-bold text-lg flex items-center gap-2">
-                  Ready to add <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-amber-500">30+ patients</span>? <span className="text-red-500 bg-red-500/10 px-2 py-0.5 rounded text-sm animate-pulse">Offer Ends in {timeLeft.hours}:{timeLeft.minutes.toString().padStart(2, '0')}:{timeLeft.seconds.toString().padStart(2, '0')}</span>
+                <p className="text-black font-extrabold text-xl sm:text-2xl flex items-center gap-3">
+                  Ready to add <span className="text-orange-600">30+ patients</span>?
+                  <span className="text-white bg-red-600 px-3 py-1 rounded-md text-base shadow-sm font-bold animate-pulse">
+                    Offer Ends in {timeLeft.hours}:{timeLeft.minutes.toString().padStart(2, '0')}:{timeLeft.seconds.toString().padStart(2, '0')}
+                  </span>
                 </p>
-                <p className="text-gray-400 text-xs">
+                <p className="text-gray-900 text-sm font-semibold mt-0.5">
                   Guaranteed results in 75 days
                 </p>
               </div>
 
               {/* Mobile Text - Simplified */}
-              <div className="block sm:hidden leading-tight">
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-amber-500 font-bold text-lg whitespace-nowrap">30+ Patients</span>
-                <span className="block text-red-500 text-xs font-medium animate-pulse">Expires in {timeLeft.hours}:{timeLeft.minutes.toString().padStart(2, '0')}:{timeLeft.seconds.toString().padStart(2, '0')}</span>
+              <div className="block sm:hidden flex flex-col justify-center">
+                <span className="text-orange-600 font-extrabold text-lg leading-none mb-1">30+ Patients</span>
+                <span className="self-start text-white bg-red-600 px-2 py-0.5 rounded text-[10px] font-bold animate-pulse shadow-sm whitespace-nowrap">
+                  Ends in {timeLeft.hours}:{timeLeft.minutes.toString().padStart(2, '0')}:{timeLeft.seconds.toString().padStart(2, '0')}
+                </span>
               </div>
 
               {/* Button */}
               <a
                 href="#calendar"
                 onClick={scrollToCalendar}
-                className="flex-shrink-0 bg-white text-black font-bold py-3 px-6 rounded-lg hover:scale-105 transition-transform shadow-[0_0_20px_rgba(255,255,255,0.4)] text-sm sm:text-base whitespace-nowrap"
+                className="flex-shrink-0 bg-black text-white font-bold py-3 px-4 sm:px-6 rounded-lg hover:scale-105 transition-transform shadow-[0_0_20px_rgba(0,0,0,0.2)] text-xs sm:text-base whitespace-nowrap"
               >
                 🎁 Start 7-Days Free Trial
               </a>
