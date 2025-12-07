@@ -212,7 +212,7 @@ function App() {
                 <h3 className="text-xl font-bold text-white mb-4 text-center">
                   Step 1: <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-orange-500">Watch the Video</span>
                 </h3>
-                <HeroVideoPlayer videoId="1141099051" />
+                <HeroVideoPlayer videoId="1144230262" />
               </div>
 
               <div className="pt-4 hidden sm:flex flex-col items-center sm:items-start order-4">
@@ -236,7 +236,7 @@ function App() {
               <h3 className="text-xl font-bold text-white mb-4 text-center">
                 Step 1: <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-orange-500">Watch the Video</span>
               </h3>
-              <HeroVideoPlayer videoId="1141099051" />
+              <HeroVideoPlayer videoId="1144230262" />
             </div>
           </div>
         </div>
